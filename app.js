@@ -10,7 +10,6 @@
   let finalTimer = null;
   let heartClicks = 0;
 
-  // Personalization
   $$('[data-my-name]').forEach(el => { el.textContent = config.myName || 'твой любимый Илья'; });
   const letterBody = $('#letterBody');
   (config.letter || '').split('\n').forEach(line => {
@@ -21,7 +20,6 @@
   $('#backgroundMusic').src = config.musicPath || '';
   $('#secretText').textContent = config.secretMessage || 'Ты очень дорога мне, зая. ♡';
 
-  // Open the gift
   $('#openGift').addEventListener('click', () => {
     welcome.classList.add('welcome-exit');
     window.setTimeout(() => {
@@ -36,7 +34,6 @@
   });
   $('#whyButton').addEventListener('click', () => $('#reasons').scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth' }));
 
-  // Reasons: never repeat until the user resets the list.
   const reasons = Array.isArray(config.reasons) ? config.reasons : [];
   const reasonText = $('#reasonText');
   function renderReason(index) {
