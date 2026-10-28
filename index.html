@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff5f7" />
+  <meta name="description" content="Маленькое цифровое письмо для самого любимого человека." />
+  <title>Для самой любимой ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marck+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="music-control"><button id="musicToggle" class="music-btn" type="button" aria-pressed="false" aria-label="Включить фоновую музыку"><span class="music-icon">♫</span><span id="musicLabel">Музыка</span></button><audio id="backgroundMusic" loop preload="none"></audio></div>
+
+  <section id="welcome" class="welcome-screen" aria-labelledby="welcomeTitle">
+    <div class="welcome-orbit orbit-one"></div><div class="welcome-orbit orbit-two"></div>
+    <div class="welcome-content">
+      <div class="tiny-label">МАЛЕНЬКИЙ ПОДАРОК ДЛЯ ТЕБЯ</div>
+      <div class="glowing-heart" aria-hidden="true">♥<span class="heart-spark spark-a">✦</span><span class="heart-spark spark-b">✧</span><span class="heart-spark spark-c">·</span></div>
+      <h1 id="welcomeTitle">У меня есть кое-что<br /><em>для тебя...</em></h1>
+      <p>Только для тебя. Только от сердца.</p>
+      <button id="openGift" class="button button-primary" type="button">Открыть моё сердечко <span>♡</span></button>
+      <div class="welcome-note">с любовью, специально для тебя</div>
+    </div>
+    <span class="float-heart fh1">♡</span><span class="float-heart fh2">♥</span><span class="float-heart fh3">♡</span>
+  </section>
+
+  <main id="mainSite" class="site-main hidden" tabindex="-1">
+    <section class="hero section-shell" id="top">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="eyebrow-line"></span> МОЁ ЛЮБИМОЕ ЧУДО <span class="eyebrow-line"></span></div>
+        <h1>Ты — моё<br /><em>любимое чудо.</em></h1>
+        <p class="hero-text">Среди миллиардов людей моё сердце почему-то выбрало именно тебя. И я бы выбрал тебя снова.</p>
+        <button class="button button-primary" id="whyButton" type="button">Почему именно ты? <span>💌</span></button>
+        <div class="hero-signature">с любовью, <span data-my-name>твой человек</span> ♡</div>
+      </div>
+      <div class="hero-art reveal" aria-label="Большое нежное сердце">
+        <div class="hero-halo"></div><div class="hero-heart">♥</div>
+        <span class="art-star star1">✦</span><span class="art-star star2">✧</span><span class="art-star star3">✦</span><span class="art-star star4">·</span>
+        <div class="art-caption">ты моё <em>счастье</em></div>
+      </div>
+      <div class="scroll-cue"><span></span> ЛИСТАЙ НИЖЕ</div>
+    </section>
+
+    <section class="reasons-section section-shell" id="reasons">
+      <div class="section-heading reveal"><div class="eyebrow">МАЛЕНЬКИЕ И БОЛЬШИЕ МЕЛОЧИ</div><h2>1000 причин<br /><em>любить тебя...</em></h2><p>И это только начало списка.</p></div>
+      <div class="reasons-layout">
+        <div class="reason-feature reveal"><span class="quote-mark">“</span><p id="reasonText">За твою улыбку, от которой у меня становится тепло на душе.</p><span class="reason-number" id="reasonCounter">01 / 24</span><div class="reason-flower">✿</div></div>
+        <div class="reason-side reveal"><div class="mini-heart">♡</div><p>Иногда причина — это целый мир. А иногда — просто ты.</p><button id="anotherReason" class="button button-outline" type="button">Ещё одну причину <span>💗</span></button><button id="resetReasons" class="text-button" type="button" hidden>Начать список сначала ↻</button></div>
+      </div>
+      <div class="reason-dots" id="reasonDots" aria-hidden="true"></div>
+    </section>
+
+    <section class="letter-section section-shell" id="letter">
+      <div class="letter-heading reveal"><div class="eyebrow">НЕСКОЛЬКО СЛОВ ОТ СЕРДЦА</div><h2>Тебе пришло одно<br /><em>очень важное письмо 💌</em></h2></div>
+      <div class="letter-stage reveal" id="letterStage">
+        <div class="envelope" id="envelope" role="img" aria-label="Закрытый розовый конверт"><div class="envelope-back"></div><div class="letter-paper"><div class="paper-stamp">♡</div><p>Моей любимой...</p></div><div class="envelope-front"></div><div class="envelope-flap"></div><div class="envelope-seal">♡</div></div>
+        <button id="readLetter" class="button button-primary" type="button">Прочитать письмо <span>↗</span></button>
+      </div>
+      <article id="letterContent" class="letter-content" hidden><div class="letter-paper-full"><div class="letter-topline">ЛИЧНО ДЛЯ ТЕБЯ · ♡</div><div id="letterBody" class="handwriting"></div><div class="letter-signoff">Всегда твой человек, <span data-my-name>твой человек</span> ♡</div><div class="letter-bottom-heart">♥</div></div></article>
+    </section>
+
+    <section class="surprises-section section-shell" id="surprises">
+      <div class="section-heading reveal"><div class="eyebrow">МАЛЕНЬКИЕ ОБНИМАШКИ ЧЕРЕЗ ЭКРАН</div><h2>Если бы нежность<br /><em>можно было нажать...</em></h2><p>Выбирай любую кнопку — я приготовил кое-что милое.</p></div>
+      <div class="surprise-grid">
+        <button class="surprise-card reveal" type="button" data-surprise="hug"><span class="surprise-emoji">🫂</span><span class="surprise-title">Обними меня</span><span class="surprise-desc">Объятие на расстоянии</span><span class="surprise-arrow">↗</span></button>
+        <button class="surprise-card reveal" type="button" data-surprise="kiss"><span class="surprise-emoji">😘</span><span class="surprise-title">Поцелуйчик</span><span class="surprise-desc">Миллион маленьких поцелуев</span><span class="surprise-arrow">↗</span></button>
+        <button class="surprise-card reveal" type="button" data-surprise="secret"><span class="surprise-emoji">🤫</span><span class="surprise-title">Секретик для тебя</span><span class="surprise-desc">Только между нами</span><span class="surprise-arrow">↗</span></button>
+        <button class="surprise-card reveal" type="button" data-surprise="love"><span class="surprise-emoji">🥺</span><span class="surprise-title">Нажми, если любишь меня</span><span class="surprise-desc">Рискни нажать, хи-хи</span><span class="surprise-arrow">↗</span></button>
+      </div>
+      <div id="surpriseResult" class="surprise-result" aria-live="polite" hidden><span class="result-heart">♡</span><p id="surpriseMessage"></p><button id="closeSurprise" class="text-button" type="button">Спрятать обратно ✧</button></div>
+      <button id="tinyHeart" class="tiny-heart-button" type="button" aria-label="Нажми на сердечко">♡</button>
+      <p class="tiny-heart-caption" id="tinyHeartCaption">P.S. это сердечко тоже хочет внимания</p>
+    </section>
+
+    <section class="universe-section" id="universe">
+      <div class="universe-stars" aria-hidden="true"></div><div class="universe-content section-shell reveal"><div class="eyebrow">ГДЕ-ТО МЕЖДУ ЗВЁЗД</div><h2>Если бы у нашей любви<br />была своя <em>вселенная...</em></h2><p>Я бы выбрал ту, в которой мы всегда находим дорогу друг к другу.</p><div class="constellation" aria-hidden="true"><span class="const-heart ch1">♥</span><span class="const-heart ch2">♡</span><span class="const-heart ch3">♥</span><span class="const-heart ch4">♡</span><i class="const-line cl1"></i><i class="const-line cl2"></i><i class="const-line cl3"></i><span class="const-star cs1">✦</span><span class="const-star cs2">✧</span><span class="const-star cs3">·</span><span class="moon">☾</span></div><div class="universe-note">ты — моя любимая точка во вселенной</div></div>
+    </section>
+
+    <section class="final-section section-shell" id="final">
+      <div class="final-content reveal"><div class="eyebrow">И ПОСЛЕДНЕЕ, НО САМОЕ ВАЖНОЕ</div><h2 id="finalQuestion">И знаешь, что самое прекрасное?</h2><p id="finalAnswer" class="final-answer" hidden>Из всех историй, которые могли случиться в моей жизни, моя любимая — та, в которой появилась ты. ♡</p><div class="final-heart">♥<span>✦</span></div><p class="final-love">Я люблю тебя. Сегодня, завтра<br />и во всех наших маленьких моментах.</p><button id="restart" class="button button-primary" type="button">Начать нашу историю сначала <span>↻</span></button><div class="final-signature">с бесконечной нежностью ♡</div></div>
+    </section>
+    <footer class="site-footer"><span>сделано с любовью</span><span class="footer-heart">♡</span><span>для самой любимой</span></footer>
+  </main>
+
+  <div id="secretModal" class="modal secret-modal" role="dialog" aria-modal="true" aria-labelledby="secretTitle" hidden><button class="modal-close" id="closeSecret" type="button" aria-label="Закрыть">×</button><div class="secret-card"><span class="secret-icon">♡</span><div class="eyebrow">МАЛЕНЬКИЙ СЕКРЕТ</div><h2 id="secretTitle">Только для тебя</h2><p id="secretText"></p><button id="secretOkay" class="button button-primary" type="button">Я сохраню это в сердечке ♡</button></div></div>
+  <div id="toastLayer" class="toast-layer" aria-live="polite"></div>
+</body>
+</html>
